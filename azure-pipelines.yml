@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: C02XG1KSJG5M
+  vmImage: mac_host
 
 steps:
 - task: Maven@3
