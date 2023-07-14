@@ -26,5 +26,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'java-app'
+    ArtifactName: 'my-webapp'
     publishLocation: 'Container'
