@@ -31,3 +31,13 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'mywebapp'
     publishLocation: 'Container'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'myDockerRegistry'
+    command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'myDockerRegistry'
+    repository: '8484810020/azuredevops'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
