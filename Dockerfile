@@ -1,3 +1,4 @@
 FROM tomcat:latest
-COPY target/my-webapp.war /usr/local/tomcat/webapps
+COPY target/*.jar /usr/local/tomcat/webapps/app.jar
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+CMD [ 'java' '-jar' '/usr/local/tomcat/webapps/app.jar' ] 
